@@ -27,14 +27,33 @@ pipeline {
                 bat 'npm run build'
             }
         }
+
+        stage('Analizar con SonarCloud') {
+            steps {
+                withSonarQubeEnv('SonarCloud') {
+                    withCredentials([string(
+                        credentialsId: 'sonarcloud-token',
+                        variable: 'SONAR_TOKEN'
+                    )]) {
+                        bat '''
+                            sonar-scanner.bat ^
+                              -Dsonar.projectKey=herneshem_flyopen-front ^
+                              -Dsonar.organization=herneshem ^
+                              -Dsonar.host.url=https://sonarcloud.io ^
+                              -Dsonar.token=%SONAR_TOKEN%
+                        '''
+                    }
+                }
+            }
+        }
     }
 
     post {
         success {
-            echo 'Pruebas y compilación de Angular completadas correctamente.'
+            echo 'Pruebas, compilación y análisis completados correctamente.'
         }
         failure {
-            echo 'Las pruebas o la compilación de Angular han fallado.'
+            echo 'Ha fallado alguna etapa del pipeline.'
         }
     }
 }
