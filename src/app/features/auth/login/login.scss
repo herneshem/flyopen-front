@@ -8,7 +8,6 @@
     background-size: cover;
 
     .loginForm {
-        background-color: #ffffff;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         width: 50%;
@@ -19,7 +18,7 @@
         h2 {
             margin-bottom: 1.5rem;
             text-align: center;
-            color: #333333;
+            color: #ffffff;
         }
 
         form {
@@ -32,7 +31,7 @@
             top: calc(50% - 4rem);
             transform: translateY(-50%);
 
-            .form-group{
+            .form-group {
                 margin-bottom: 1rem;
 
                 label {
@@ -73,7 +72,7 @@
 
         p {
             text-align: center;
-            color: #333333;
+            color: #ffffff;
             bottom: 0;
             position: absolute;
         }
