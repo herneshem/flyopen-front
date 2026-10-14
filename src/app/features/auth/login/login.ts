@@ -20,7 +20,7 @@ export class Login {
       {
         next: () => {
           // Handle successful login, e.g., store the token, navigate to another page, etc.
-          this.router.navigate(['/']);
+          this.router.navigate(['/main-layout']); // Navigate to the main layout after successful login
         },
         error: (error) => {
           // Handle login error, e.g., show an error message to the user

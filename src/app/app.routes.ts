@@ -4,11 +4,11 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
 
 export const routes: Routes = [
   {
-    path: 'login',
+    path: '',
     component: Login
   },
   {
-    path: '',
+    path: 'main-layout',
     component: MainLayoutComponent
   },
   {
