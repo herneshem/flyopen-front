@@ -1,0 +1,60 @@
+
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="logo">
+      <h2>FlyOpen</h2>
+    </div>
+
+    <nav class="menu">
+      <a routerLink="/" class="menu-item active">
+        Inicio
+      </a>
+
+      <a routerLink="/componentes" class="menu-item">
+        Componentes
+      </a>
+
+      <a routerLink="/importaciones" class="menu-item">
+        Importaciones
+      </a>
+
+      <a routerLink="/configuracion" class="menu-item">
+        Configuración
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button type="button">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <main class="content">
+    <header class="topbar">
+      <h1>Panel principal</h1>
+    </header>
+
+    <section class="page-content">
+      <h2>Bienvenido a FlyOpen</h2>
+      <p>Selecciona una opción del menú para comenzar.</p>
+
+      <div class="dashboard">
+        <article class="dashboard-card">
+          <h3>Componentes</h3>
+          <p>Consulta y gestiona los componentes.</p>
+        </article>
+
+        <article class="dashboard-card">
+          <h3>Importaciones</h3>
+          <p>Accede a la gestión de importaciones.</p>
+        </article>
+
+        <article class="dashboard-card">
+          <h3>Configuración</h3>
+          <p>Administra las opciones de la aplicación.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</div>
+<router-outlet />
